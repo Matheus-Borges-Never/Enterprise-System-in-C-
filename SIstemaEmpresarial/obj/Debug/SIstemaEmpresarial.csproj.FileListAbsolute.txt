@@ -1,0 +1,13 @@
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\bin\Debug\SIstemaEmpresarial.exe.config
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\bin\Debug\SIstemaEmpresarial.exe
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\bin\Debug\SIstemaEmpresarial.pdb
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.csproj.AssemblyReference.cache
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.csproj.SuggestedBindingRedirects.cache
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.Form1.resources
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.FormEmpresa.resources
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.Properties.Resources.resources
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.csproj.GenerateResource.cache
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.exe
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.pdb
+C:\Users\Matheus\source\repos\SIstemaEmpresarial\obj\Debug\SIstemaEmpresarial.FormFuncionario.resources
