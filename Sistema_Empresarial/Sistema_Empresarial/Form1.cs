@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Sistema_Empresarial
 {
@@ -39,7 +33,6 @@ namespace Sistema_Empresarial
             cm.ExecuteNonQuery();
             da.SelectCommand = cm;
             DataTable dt = new DataTable();
-
             da.Fill(dt);
 
             if (dt.Rows.Count > 0)
@@ -56,6 +49,13 @@ namespace Sistema_Empresarial
                 txtSenha.PasswordChar = '*';    //Limpa a textbox apos o erro
                 txtEmpresa.Select();    //Seleciona a textbox
             }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            FormEmpresa empresa = new FormEmpresa(); //Chama  tela de cadastro de empresa
+            this.Hide();
+            empresa.Show();
         }
     }
 }

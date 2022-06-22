@@ -9,3 +9,4 @@ E:\VStudio\Sistema\Sistema_Empresarial\Sistema_Empresarial\obj\Debug\Sistema_Emp
 E:\VStudio\Sistema\Sistema_Empresarial\Sistema_Empresarial\obj\Debug\Sistema_Empresarial.csproj.CoreCompileInputs.cache
 E:\VStudio\Sistema\Sistema_Empresarial\Sistema_Empresarial\obj\Debug\Sistema_Empresarial.exe
 E:\VStudio\Sistema\Sistema_Empresarial\Sistema_Empresarial\obj\Debug\Sistema_Empresarial.pdb
+E:\VStudio\Sistema\Sistema_Empresarial\Sistema_Empresarial\obj\Debug\Sistema_Empresarial.FormEmpresa.resources
