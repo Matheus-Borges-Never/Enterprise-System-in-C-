@@ -32,7 +32,6 @@
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,16 +45,17 @@
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Sistem = new System.Windows.Forms.Label();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.mtbTelefone);
             this.panel1.Controls.Add(this.txtComplemento);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.mskTelefone);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNumero);
             this.panel1.Controls.Add(this.label6);
@@ -104,15 +104,6 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mskTelefone
-            // 
-            this.mskTelefone.HideSelection = false;
-            this.mskTelefone.Location = new System.Drawing.Point(470, 134);
-            this.mskTelefone.Mask = "(00) 00000-0000";
-            this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(105, 20);
-            this.mskTelefone.TabIndex = 13;
             // 
             // label3
             // 
@@ -243,6 +234,16 @@
             this.Sistem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Sistem.Click += new System.EventHandler(this.Sistem_Click);
             // 
+            // mtbTelefone
+            // 
+            this.mtbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefone.Location = new System.Drawing.Point(466, 134);
+            this.mtbTelefone.Mask = "(00)00000-0000";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(122, 22);
+            this.mtbTelefone.TabIndex = 17;
+            this.mtbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // FormEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,7 +265,6 @@
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label6;
@@ -278,5 +278,6 @@
         private System.Windows.Forms.TextBox txtEmpresa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Sistem;
+        private System.Windows.Forms.MaskedTextBox mtbTelefone;
     }
 }

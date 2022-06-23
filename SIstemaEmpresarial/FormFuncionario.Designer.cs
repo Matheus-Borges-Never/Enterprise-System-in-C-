@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.cbbCargo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.Sistem = new System.Windows.Forms.Label();
-            this.cbbCargo = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtdMostrar = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbbAlCargo = new System.Windows.Forms.ComboBox();
-            this.txtAlSalario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAlNome = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.txtAlSalario = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtdMostrar)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.cbbCargo);
             this.panel1.Controls.Add(this.txtSalario);
+            this.panel1.Controls.Add(this.cbbCargo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnCadastrar);
             this.panel1.Controls.Add(this.label4);
@@ -66,26 +66,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(733, 117);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnAlterar
+            // cbbCargo
             // 
-            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAlterar.Location = new System.Drawing.Point(62, 179);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(115, 35);
-            this.btnAlterar.TabIndex = 14;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // txtSalario
-            // 
-            this.txtSalario.Location = new System.Drawing.Point(512, 18);
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(161, 20);
-            this.txtSalario.TabIndex = 9;
+            this.cbbCargo.FormattingEnabled = true;
+            this.cbbCargo.Items.AddRange(new object[] {
+            "Programador",
+            "Design",
+            "Administraçao"});
+            this.cbbCargo.Location = new System.Drawing.Point(308, 18);
+            this.cbbCargo.Name = "cbbCargo";
+            this.cbbCargo.Size = new System.Drawing.Size(126, 21);
+            this.cbbCargo.TabIndex = 17;
             // 
             // label5
             // 
@@ -140,6 +133,19 @@
             this.label2.Text = "Nome:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAlterar.Location = new System.Drawing.Point(62, 179);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(115, 35);
+            this.btnAlterar.TabIndex = 14;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            // 
             // Sistem
             // 
             this.Sistem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -151,31 +157,19 @@
             this.Sistem.Text = "Funcionarios";
             this.Sistem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cbbCargo
+            // dtdMostrar
             // 
-            this.cbbCargo.FormattingEnabled = true;
-            this.cbbCargo.Items.AddRange(new object[] {
-            "Programador",
-            "Design",
-            "Administraçao"});
-            this.cbbCargo.Location = new System.Drawing.Point(308, 18);
-            this.cbbCargo.Name = "cbbCargo";
-            this.cbbCargo.Size = new System.Drawing.Size(126, 21);
-            this.cbbCargo.TabIndex = 17;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(460, 184);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(297, 254);
-            this.dataGridView1.TabIndex = 15;
+            this.dtdMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtdMostrar.Location = new System.Drawing.Point(460, 184);
+            this.dtdMostrar.Name = "dtdMostrar";
+            this.dtdMostrar.Size = new System.Drawing.Size(297, 254);
+            this.dtdMostrar.TabIndex = 15;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.cbbAlCargo);
             this.panel2.Controls.Add(this.txtAlSalario);
+            this.panel2.Controls.Add(this.cbbAlCargo);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnAlterar);
             this.panel2.Controls.Add(this.label3);
@@ -198,13 +192,6 @@
             this.cbbAlCargo.Size = new System.Drawing.Size(126, 21);
             this.cbbAlCargo.TabIndex = 17;
             // 
-            // txtAlSalario
-            // 
-            this.txtAlSalario.Location = new System.Drawing.Point(72, 114);
-            this.txtAlSalario.Name = "txtAlSalario";
-            this.txtAlSalario.Size = new System.Drawing.Size(161, 20);
-            this.txtAlSalario.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,20 +202,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Salario:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.Red;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSair.Location = new System.Drawing.Point(642, 9);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(115, 35);
-            this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // label3
             // 
@@ -259,13 +232,41 @@
             this.label6.Text = "Nome:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Red;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSair.Location = new System.Drawing.Point(642, 9);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(115, 35);
+            this.btnSair.TabIndex = 5;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(510, 19);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(95, 20);
+            this.txtSalario.TabIndex = 18;
+            // 
+            // txtAlSalario
+            // 
+            this.txtAlSalario.Location = new System.Drawing.Point(72, 111);
+            this.txtAlSalario.Name = "txtAlSalario";
+            this.txtAlSalario.Size = new System.Drawing.Size(124, 20);
+            this.txtAlSalario.TabIndex = 18;
+            // 
             // FormFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtdMostrar);
             this.Controls.Add(this.Sistem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);
@@ -273,7 +274,7 @@
             this.Text = "FormFuncionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtdMostrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -284,7 +285,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label4;
@@ -292,14 +292,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbbCargo;
         private System.Windows.Forms.Label Sistem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtdMostrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbbAlCargo;
-        private System.Windows.Forms.TextBox txtAlSalario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAlNome;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.TextBox txtAlSalario;
     }
 }

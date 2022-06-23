@@ -29,31 +29,30 @@ namespace SIstemaEmpresarial
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            conexao.Open(); //Abri conexão com o BD
-            SqlCommand cm;
-            string query = "insert into empresa values('" + txtEmpresa.Text + "','" + txtSenha.Text + "','" + txtEndereco.Text + "','" + txtComplemento.Text + "'," + txtCep.Text + ",'" + txtNumero.Text + "'," + mskTelefone.Text + ") ";
-            cm = new SqlCommand(query, conexao);
-            SqlDataAdapter da = new SqlDataAdapter();
-            cm.ExecuteNonQuery();
-            da.SelectCommand = cm;
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
+            if (conexao.State == ConnectionState.Closed)
             {
-                MessageBox.Show("Empresa Cadastrada!!!");
-                txtEmpresa.Text = "";   //Limpa a textbox apos o erro
-                txtSenha.PasswordChar = '*';    //Limpa a textbox apos o erro
-                txtEmpresa.Select();    //Seleciona a textbox
-                conexao.Close(); //Fecha conexao com o BD
+                conexao.Open();
             }
-            else
+            if (conexao.State == ConnectionState.Open)
             {
-                MessageBox.Show("Usuario incorreto ou não existe!!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmpresa.Text = "";   //Limpa a textbox apos o erro
-                txtSenha.PasswordChar = '*';    //Limpa a textbox apos o erro
-                txtEmpresa.Select();    //Seleciona a textbox
+                SqlCommand cm;
+                string sql = "";
+                sql = "insert into empresa values ('" + txtEmpresa.Text + "','" + txtSenha.Text + "','" + txtEndereco.Text + "','" + txtComplemento.Text + "'," + txtCep.Text + ",'" + txtNumero.Text + "'," + mtbTelefone.Text + ")";
+                cm = new SqlCommand(sql, conexao);
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cm;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
+                if (cm.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("O Produto foi inserido com sucesso!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario já existe!!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
